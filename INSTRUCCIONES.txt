@@ -1,0 +1,71 @@
+APP "RESERVAS ALMASSORA" PARA ANDROID
+====================================
+
+Este proyecto se convierte en un fichero .apk (el instalador de Android).
+Hay dos formas de hacerlo. Elige UNA.
+
+
+OPCIÓN A — CON ANDROID STUDIO (en tu ordenador)
+-----------------------------------------------
+1. Descarga e instala Android Studio (gratis):
+   https://developer.android.com/studio
+   Instálalo con las opciones por defecto. Pesa bastante; tardará un rato.
+
+2. Descomprime este .zip en una carpeta (por ejemplo, en el Escritorio).
+
+3. Abre Android Studio → "Open" → elige la carpeta "ReservasAlmassora".
+   La primera vez descargará cosas durante unos minutos (abajo verás una
+   barra de progreso). Espera a que termine.
+
+4. Menú "Build" → "Build App Bundle(s) / APK(s)" → "Build APK(s)".
+   Cuando termine, aparece un aviso abajo a la derecha: pulsa "locate".
+   El fichero es: app\build\outputs\apk\debug\app-debug.apk
+
+5. Pasa ese app-debug.apk al móvil (cable USB, Google Drive, WhatsApp
+   a ti mismo, etc.).
+
+
+OPCIÓN B — CON GITHUB (sin instalar nada en el ordenador)
+---------------------------------------------------------
+1. Crea una cuenta gratis en https://github.com
+2. Botón "+" (arriba a la derecha) → "New repository". Ponle un nombre,
+   márcalo como "Private" y pulsa "Create repository".
+3. En la página del repositorio, pulsa "uploading an existing file" y
+   arrastra TODO el contenido de la carpeta "ReservasAlmassora"
+   (incluida la carpeta ".github"). Pulsa "Commit changes".
+4. Ve a la pestaña "Actions". Se pondrá en marcha "Compilar APK" sola
+   (tarda unos 5 minutos). Cuando salga en verde, entra en ella y, abajo
+   del todo, descarga "ReservasAlmassora-apk". Dentro está el .apk.
+   Si la carpeta .github no se subió, no saldrá nada en "Actions":
+   súbela de nuevo.
+
+
+INSTALAR EN EL MÓVIL
+--------------------
+1. Abre el app-debug.apk en el móvil.
+2. Android avisará de "origen desconocido": permite instalar desde esa
+   app (Archivos, Chrome, Drive...). Es normal: la app no viene de la
+   Play Store.
+3. Si Google Play Protect avisa, pulsa "Instalar de todas formas".
+
+
+CÓMO SE USA
+-----------
+1. Escribe email y contraseña y pulsa "Guardar".
+2. Revisa las clases (vienen puestas Aquagym martes y jueves 20:20).
+   "Fecha": "Cada semana" o un día concreto.
+3. Pulsa "Recargar horarios" la primera vez (opcional, la app ya trae
+   los horarios que tenías en el ordenador).
+4. Pulsa "Activar bot".
+5. DEJA LA APP ABIERTA, con el móvil enchufado al cargador. La pantalla
+   no se apagará sola. Puedes pulsar "Atenuar pantalla" para que gaste
+   menos.
+6. En la pestaña "Registro" ves todo lo que hace. Si algo falla, pulsa
+   "Copiar registro" y pégalo donde quieras para revisarlo.
+
+IMPORTANTE
+- Si sales de la app, apagas la pantalla o el móvil se bloquea, el bot
+  deja de funcionar.
+- Lo ideal es un móvil viejo dedicado a esto, siempre enchufado.
+- Ajustes avanzados (días/horas de antelación, esperas...): están al
+  principio de app/src/main/java/es/almassora/reservas/MainActivity.java
